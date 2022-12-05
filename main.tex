@@ -1,0 +1,198 @@
+\documentclass[twocolumn,9pt]{jsproceedings}
+\RequirePackage[l2tabu,orthodox]{nag}  % 古いコマンドやパッケージを使用した場合に警告する
+\usepackage[all,warning]{onlyamsmath}  % amsmath が提供しない数式環境を使用した場合に警告する
+% \usepackage{flushend}  % 最終ページの2カラムの左右の高さを揃える
+\usepackage{here} %図の場所の指定で[h]（ここに貼る）を指定するためのパッケージ
+\usepackage[dvipdfmx]{graphicx} %dvipdfmxはjpgやpngの張り込みのために使用
+
+
+% タイトル
+\title{2D LiDARを搭載した小型移動ロボットでの\\つくばチャレンジ2022参加レポート}
+
+\author{○池邉　龍宏\authorrefmark{1}, 内田　璃空\authorrefmark{1}, 畑中　優一郎\authorrefmark{1}, 林原　靖男\authorrefmark{1}, 上田　隆一\authorrefmark{1}}
+
+\etitle{Participation report in the Tsukuba Challenge 2022\\using a small mobile robot with 2D LiDAR}
+
+\eauthor{○Tatsuhiro IKEBE\eauthorrefmark{1}, Riku UCHIDA\eauthorrefmark{1}, Yuichiro HATANAKA\eauthorrefmark{1}, \\Yasuo HAYASHIBARA\eauthorrefmark{1}, Ryuichi UEDA\eauthorrefmark{1}}
+
+\affiliation{千葉工業大学 未来ロボティクス学科 Cat Aチーム}
+
+% \abstract{
+% }
+
+% \keywords{}
+
+\begin{document}
+\maketitle
+
+\authorreftext{1}{千葉工業大学先進工学部未来ロボティクス学科}
+\authorreftext{2}{千葉工業大学先進工学研究科未来ロボティクス専攻}
+\eauthorreftext{1}{Department of Advanced Robotics, Faculty of Advanced Engineering, Chiba Institute of Technology}
+\eauthorreftext{2}{Department of Advanced Robotics, Graduate School of Advanced Engineering, Chiba Institute of Technology}
+
+% 本文
+\section{緒言}
+筆者らは, 簡素なハードウェア構成で小型移動ロボットを
+屋外で安定して自律走行させるためのソフトウェアを研究している．
+つくばチャレンジには，
+「千葉工業大学 未来ロボティクス学科 Cat Aチーム」として参加し, 
+実環境で起こる問題の洗い出しと解決方法のテストを行っている．
+当チームは, 今年で2回目の参加であり, 去年走行してなかった信号あり横断歩道→研究学園駅→公園→ゴール
+までのルートを重点的にテストした.
+本稿では，使用したロボットのハードウェアとソフトウェア構成と共に，
+本年度のつくばチャレンジで取り組んだことを報告する．
+
+本レポートの構成は次の通りである. 
+2章, 3章では, 参加したロボットの構成について, 
+それぞれハードウェア, ソフトウェアの面から解説する. 
+4章では本年度のつくばチャレンジでのチームの活動や, 
+実験走行, 本走行での結果を説明する. 
+5章で考察を行い, 6章で結言を述べる. 
+
+\section{ハードウェア}
+
+つくばチャレンジ2022で使用したロボットは, 
+既製品のRaspberry Pi Cat（以下ラズパイキャットと呼ぶ）\cite{RTshop}である．
+図\ref{fig:raspicat}に使用した機体を示す．
+本章では，このロボットについて説明をする.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{figs/raspicat.pdf}
+		\caption{Raspberry Pi Cat（つくばチャレンジ2022）}
+		\label{fig:raspicat}
+	\end{center}
+\end{figure}
+
+\subsection{2D LiDARの取り付け位置の調整}
+
+\subsection{ジャイロ，IMU，ロータリーエンコーダ不使用の判断}
+
+\subsection{電源}
+
+\subsection{規定の高さにするためのアルミフレームの追加}
+
+\section{ソフトウェア}
+
+本章では，ソフトウェア構成の他，
+安定した自律走行をさせるために工夫したことなどについて説明する.
+
+
+\subsection{ソフトウェアの構成}
+
+\subsection{GIMPによるマップの合成}
+
+\subsection{経路計画のためのマップ編集}
+
+
+\subsection{自己位置推定テストR}
+
+\subsection{シミュレーション環境でのナビゲーションのテスト}
+
+\section{つくばチャレンジ2022での走行結果}
+
+\subsection{自己位置推定の調整（10月9日，10月23日, 11月7日）}
+
+
+\subsection{試走と本走行（11月19日〜本走行）}
+
+
+\section{考察}
+
+\subsection{環境の段差や障害物と小型ロボット}
+
+
+\subsection{バッテリーの問題}
+
+\section{結言}
+
+\section*{謝辞}
+つくばチャレンジを開催していただいたこと運営委員会とつくば市の皆様に感謝申し上げます．
+つくばチャレンジの参加にあたりまして千葉工業大学未来ロボティクス学科の上田研究室，
+林原研究室の方々にご協力いただいたこと感謝申し上げます．
+本研究の一部はJSPS科研費JP20K04382の助成を受けました．
+
+% 参考文献
+% \small
+\footnotesize
+\begin{thebibliography}{99}
+  \bibitem{ROS}
+	  Morgan Quigley {\it et al.}: ``ROS: an open-source Robot Operating System,'' 
+Open-Source Software workshop of the International Conference on Robotics and Automation, 2009. 
+
+\bibitem{ueda2002tdp}
+	Ryuichi Ueda {\it et al.}: 
+``Team description of Team ARAIBO,'' 
+Proc. of 2002 International RoboCup Symposium, 2002. 
+
+  \bibitem{ueda2004iros}
+	Ryuichi Ueda {\it et al.}: 
+  ``Expansion Resetting for Recovery from Fatal Error in Monte Carlo Localization -- Comparison with Sensor Resetting Methods,'' Proc．of IROS，pp.2481--2486，2004．
+  
+  \bibitem{map2gazebo}
+  Shiloh Curtis: ``shilohc/map2gazebo''，\url{https://github.com/shilohc/map2gazebo} (last visit: 2021-12-31)．
+  
+  \bibitem{move_base}
+  Eitan Marder-Eppstein: ``move\_base,'' \url{http://wiki.ros.org/move_base} (last visit: 2021-12-31)．
+  
+  \bibitem{amcl}
+  Brian Gerkey: ``amcl,'' \url{https://wiki.ros.org/amcl} (last visit: 2021-12-31)．
+
+  \bibitem{gmapping}
+  Brian Gerkey: ``gmapping,'' \url{http://wiki.ros.org/gmapping} (last visit: 2021-12-31)．
+  
+  \bibitem{GIMP}
+  GIMP.org: ``GIMP,'' \url{https://www.gimp.org/} (last visit: 2021-12-31)．
+  
+  \bibitem{emcl}
+  Ryuichi Ueda: ``ryuichiueda/emcl,''\\\url{https://github.com/ryuichiueda/emcl} (last visit: 2021-12-31).
+  
+  \bibitem{raspicat}
+  Ryuichi Ueda and Daisuke Sato: ``ja/raspicat,'' \url{https://wiki.ros.org/ja/raspicat} (last visit: 2021-12-31)．
+  
+  \bibitem{raspicat_rosbag}
+  Tatsuhiro Ikebe: ``uhobeike/raspicat\_rosbag,'' \url{https://github.com/uhobeike/raspicat_rosbag} (last visit: 2021-12-31)．
+
+
+  \bibitem{池邉2021}
+ 池邉 龍宏，曹 越，高橋 秀太，クルス　ペレス アントニオ，林原 靖男，上田 隆一: 小型移動ロボットによるつくばチャレンジへの挑戦，第22回計測自動制御学会システムインテグレーション部門講演会，pp.3390-3393，2021.
+
+\bibitem{上田2019}
+上田 隆一: ``詳解確率ロボティクス'', 講談社, 2019.
+
+  \bibitem{上田2020}
+ 上田隆一，鈴木勇矢: 自己位置が不確かな状況における移動ロボットの危険回避行動の生成，第38回日本ロボット学会学術講演会予稿集，pp．RSJ2020AC2C2-02，オンライン開催，2020.
+
+  \bibitem{地図合成}
+  川合隆太他: ``産業技術大学院大学における自律移動ロボット「産技大2号」の開発''，2019年度つくばチャレンジシンポジウム, pp.4-7, 2020.
+
+  \bibitem{RTshop}
+  株式会社アールティ：``Raspberry Pi Cat 屋外でも動かせる中型2輪ロボット''，
+  RT Robot Shop Products，\url{https://rt-net.jp/products/raspberry-pi-cat/} (last visit 2021-12-31)
+
+  \bibitem{aws2020}
+	  CIT自律ロボット研究室: ``AWSロボットデリバリーチャレンジで本研究室メンバーが優勝,'' \url{https://lab.ueda.tech/?post=20200915_aws_challenge} (last visit 2022-01-04)
+
+  \bibitem{学科サイト}
+	  千葉工業大学先進工学部未来ロボティクス学科: ``AWS Robot Delivery Challenge 2021 準優勝'', \url{https://www.robotics.it-chiba.ac.jp/j/?p=838} (last visit 2022-01-04)
+  
+  \bibitem{つくばチャレンジロボット仕様}
+  つくばチャレンジ実行委員会事務局：``つくばチャレンジ 2021 ロボット仕様条件''，
+  \url{https://tsukubachallenge.jp/2021/regulations/specs} (last visit 2021-12-31)
+  
+  \bibitem{UST-30LX}
+  北陽電機株式会社：``UST-30LX''，\url{https://www.hokuyo-aut.co.jp/search/single.php?serial=195#spec} (last visit: 2021-12-31).
+  
+  \bibitem{Turtlebot3 Burger}
+  株式会社ロボティズ： ``Turtlebot3 Burgerの仕様''，\url{https://emanual.robotis.com/docs/en/platform/turtlebot3/features/} (last visit: 2022-1-3)．
+  
+  \bibitem{つくばチャレンジ公式記録}
+  つくばチャレンジ実行委員会事務局：``つくばチャレンジ2021の走行結果''，
+  \url{https://tsukubachallenge.jp/2021/records/final} (last visit 2021-12-31)
+
+  \bibitem{出野畑中}
+	  畑中 優一郎，出野 廣太郎，上田 隆一：``Raspberry Pi 3BのみでRaspberry Pi Catのナビゲーション（屋内環境編）''，CIT自律ロボット研究室，\url{https://lab.ueda.tech/?post=20211210} (last visit 2022-01-02)
+\end{thebibliography}
+\normalsize
+
+\end{document}
