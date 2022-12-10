@@ -35,22 +35,37 @@
 % 本文
 \section{緒言}
 
-筆者らは, 簡素な構成の小型移動ロボットを、
+千葉工業大学未来ロボティクス学科Cat Aチーム/Bチームは、
+図\ref{fig:raspicat}に見られる小型で簡素なセンサ構成のロボットを、
 屋外で安定して自律走行させるためのソフトウェアを研究している．
-つくばチャレンジには，
-「千葉工業大学 未来ロボティクス学科 Cat Aチーム/Bチーム」の2チームで参加し, 
-実環境で起こる問題の洗い出しと解決方法のテストを行っている．
+簡素さをテーマにするのは、
+情報が不確かなときのロボットの振る舞いに興味があるからである。
+そのときそのときの最新、高性能のセンサを次々に導入する方針だと、
+アルゴリズムの工夫にかける時間や動機が減ったり、
+ロボットの計算機、台車、電池の大型化、
+製作、メンテナンス費用の増大を招いたりするからである。
 
-%↓これが先に書いてあるかどうかで読む人の数が激変する。
 
-簡素な構成とは、具体的には計算機を含むハードウェアの部品点数を減らすことを指す。本年度は、
+本年度は、
 \begin{itemize}
 \item 計算機としてRaspberry Piのみを使用
 \item 外界センサとして2次元LiDARのみを使用
 \item 移動量の算出に内界センサ（IMUやオドメータ）を不使用
 \end{itemize}
-という構成で、なるべく長距離の自律移動を実現することを試みた。
+という構成で、つくばチャレンジ本走行での完走を試みた。
+
+既成品の小型のロボットに2次元のレーザスキャナ
+（LiDAR）を取り付けた図\ref{fig:raspicat}の2台のロボットで参加した。
+
 使用したロボットは図\ref{fig:raspicat}のような既成品の小型のロボットである. 
+
+\begin{figure}[h]
+ 	\begin{center}
+ 		\includegraphics[width=1.0\linewidth]{figs/raspicat.pdf}
+ 		\caption{Raspberry Pi Cat（つくばチャレンジ2022）}
+ 		\label{fig:raspicat}
+ 	\end{center}
+\end{figure}
 
 %つくばチャレンジの結果
 Cat Aチームの本走行結果は200mであり,  
@@ -165,13 +180,6 @@ NavigationStackを使用した.
 % 図\ref{fig:raspicat}に使用した機体を示す．
 % 本章では，このロボットについて去年との差分を含めて説明をする.
 
-% \begin{figure}[h]
-% 	\begin{center}
-% 		\includegraphics[width=1.0\linewidth]{figs/raspicat.pdf}
-% 		\caption{Raspberry Pi Cat（つくばチャレンジ2022）}
-% 		\label{fig:raspicat}
-% 	\end{center}
-% \end{figure}
 
 % \subsection{ハードウェア構成}
 
